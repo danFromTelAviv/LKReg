@@ -2,7 +2,7 @@
 image registration using Lucas Kanade forward additive method.
 
 # Overview  :
-The following is a simple pure python implementation of forward addative registration ( image alignment ). 
+The following is a simple pure python implementation of forward addative registration ( image alignment ). The point of the algorithm is to match two images to each other so that the position of each pixel in one image can be specified in the second image. 
 
 # Simple example  : 
 
@@ -20,7 +20,7 @@ LKReg.imshowpair(fixed,moving,tforms[0], figureTitle = 'before')
 LKReg.imshowpair(fixed,moving,tforms[-1], figureTitle = 'after')
 
 # In depth  :
-This module allows for fast, subpixel accurate, robust registration. It essentially performs stochatic gradient decent using a first order taylor polynomial aproximation of the gradient. This is very similar to whats found in cv2 / matlab imregister. The ECC ( enhanced correlation coefficient ) algorithm is also implemented which adds robustness and reduces the numbers of needed itterations. This registration can use pyramiding ( or not - npyramids = 1 ) to deal with relatively large transformations. 
+This module allows for fast, subpixel accurate, robust registration. It essentially performs stochatic gradient decent using a first order taylor polynomial aproximation of the gradient. This is very similar to whats found in cv2 / matlab imregister. The ECC ( enhanced correlation coefficient ) algorithm is also implemented which adds robustness and reduces the numbers of needed itterations. This registration can use pyramiding ( or not - npyramids = 1 ) to deal with relatively large transformations. The registration is homography only ( no affine, translation, similarity ...etc options ( yet )). 
 
 
 # references:
